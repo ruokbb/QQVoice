@@ -1,6 +1,6 @@
 input_file="$1"
 pcm_file="${input_file%.*}.pcm"
-silk_file="${input_file%.*}.silk"
+silk_file="${input_file%.*}.slk"
 
 cur_dir=$(dirname "$0")
 
