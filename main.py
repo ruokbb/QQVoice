@@ -7,15 +7,17 @@
 @Software: PyCharm
 @desc: 
 """
+import os.path
 
 import gradio as gr
 from fastapi import FastAPI
 import uvicorn
 from network.request import get_model_names_api, get_refer_list_api, upload_refer_api, download_wav_api
+from parser.slk_product import get_silk_from_wav
 
 select_model_name = "default"
 select_refer = "default"
-wav_path = "tmp.wav"
+wav_path = "output.wav"
 
 
 def get_model_names():
@@ -65,24 +67,27 @@ def get_tts_wav(inp_ref, prompt_text, prompt_language, text, text_language):
         if not upload_result:
             raise Exception("upload faild")
         # 获取音频
-        download_result = download_wav_api("tmp", text, text_language, select_model_name)
+        download_result = download_wav_api("tmp", text, text_language, select_model_name, output_path=wav_path)
         if not download_result:
             raise Exception("download faild")
     else:
         # 使用预设音频
-        download_result = download_wav_api(select_refer, text, text_language, select_model_name)
+        download_result = download_wav_api(select_refer, text, text_language, select_model_name, output_path=wav_path)
         if not download_result:
             raise Exception("download faild")
     # 前端显示 output.wav
     # 打开音频文件并读取其内容
-    with open("output.wav", 'rb') as f:
+    with open(wav_path, 'rb') as f:
         audio_bytes = f.read()
 
     return audio_bytes
 
 def download_slk():
-    # return slk path
-    pass
+    if os.path.exists(wav_path):
+        slk_path = get_silk_from_wav(wav_path)
+        return slk_path
+    else:
+        return ""
 
 
 model_names = get_model_names()
