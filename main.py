@@ -50,7 +50,7 @@ def change_model(model_name):
     else:
         select_refer = "default"
         _tone_list = ["default"]
-    return {"choices": _tone_list, "value":_tone_list[0], "__type__": "update"}
+    return {"choices": _tone_list, "value": _tone_list[0], "__type__": "update"}
 
 
 def change_tone(tone):
@@ -82,11 +82,13 @@ def get_tts_wav(inp_ref, prompt_text, prompt_language, text, text_language):
 
     return audio_bytes
 
+
 def download_slk():
     if os.path.exists(wav_path):
         slk_path = get_silk_from_wav(wav_path)
         return slk_path
     else:
+        print("wav不存在:{}".format(wav_path))
         return ""
 
 
@@ -97,7 +99,8 @@ with gr.Blocks(title="QQ语音替换") as demo:
     with gr.Group():
         gr.Markdown(value="模型选择")
         with gr.Row():
-            model_dropdown = gr.Dropdown(label="模型列表", choices=model_names, value=select_model_name, interactive=True)
+            model_dropdown = gr.Dropdown(label="模型列表", choices=model_names, value=select_model_name,
+                                         interactive=True)
             refer_dropdown = gr.Dropdown(label="语气", choices=tone_list, value=select_refer, interactive=True)
             refresh_button = gr.Button("刷新模型列表", variant="primary")
             refresh_button.click(fn=change_model_names, inputs=[], outputs=[model_dropdown])
@@ -126,7 +129,7 @@ with gr.Blocks(title="QQ语音替换") as demo:
         gr.Markdown(value="QQ录音替换")
         with gr.Row():
             slk = gr.components.File(label="下载文件")
-            slk_btn = gr.Button("下载", variant="primary")
+            slk_btn = gr.Button("生成slk文件", variant="primary")
         slk_btn.click(fn=download_slk, outputs=slk)
 
 app = FastAPI()
