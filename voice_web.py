@@ -3,7 +3,7 @@
 """
 @Time: 2024/2/2 16:46
 @Author: shiqixin.set
-@File: main.py
+@File: voice_web.py
 @Software: PyCharm
 @desc: 
 """
@@ -17,7 +17,7 @@ from parser.slk_product import get_silk_from_wav
 
 select_model_name = "default"
 select_refer = "default"
-wav_path = "output.wav"
+wav_path = "aoutput.wav"
 
 
 def get_model_names():

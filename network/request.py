@@ -50,7 +50,7 @@ def upload_refer_api(file_path, file_text, file_language):
         return -1
 
 
-def download_wav_api(refer_name, text, text_language, model_name, output_path="output.wav"):
+def download_wav_api(refer_name, text, text_language, model_name, output_path="aoutput.wav"):
     headers = {"token": TOKEN}
     payload = {"refer_name": refer_name, "text": text, "text_language": text_language, "model_name": model_name}
     response = requests.get(DOWNLOAD_WAV_URL, headers=headers, params=payload)
