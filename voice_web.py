@@ -14,6 +14,7 @@ from fastapi import FastAPI
 import uvicorn
 from network.request import get_model_names_api, get_refer_list_api, upload_refer_api, download_wav_api
 from parser.slk_product import get_silk_from_wav
+from parser.amr_product import get_amr_from_wav
 
 select_model_name = "default"
 select_refer = "default"
@@ -92,6 +93,15 @@ def download_slk():
         return ""
 
 
+def download_amr():
+    if os.path.exists(wav_path):
+        amr_path = get_amr_from_wav(wav_path)
+        return amr_path
+    else:
+        print("wav不存在:{}".format(wav_path))
+        return ""
+
+
 model_names = get_model_names()
 tone_list = ["default"]
 
@@ -126,11 +136,13 @@ with gr.Blocks(title="QQ语音替换") as demo:
             [inp_ref, prompt_text, prompt_language, text, text_language],
             [output]
         )
-        gr.Markdown(value="QQ录音替换")
+        gr.Markdown(value="语音替换")
         with gr.Row():
-            slk = gr.components.File(label="下载文件")
+            silk_file = gr.components.File(label="语音文件")
             slk_btn = gr.Button("生成slk文件", variant="primary")
-        slk_btn.click(fn=download_slk, outputs=slk)
+            amr_btn = gr.Button("生成amr文件", variant="primary")
+        slk_btn.click(fn=download_slk, outputs=silk_file)
+        amr_btn.click(fn=download_amr, outputs=silk_file)
 
 app = FastAPI()
 app = gr.mount_gradio_app(app, demo, path="/QQVoice")

@@ -4,19 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="124c1c94-d222-41da-853a-cff9940788df" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/QQVoice.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/device/device.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-    </list>
+    <list default="true" id="124c1c94-d222-41da-853a-cff9940788df" name="Changes" comment="[update] 文件名显示优化" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -51,15 +39,17 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/Admin/Desktop/Project/QQVoice"
+    "last_opened_file_path": "C:/Users/Admin/Desktop/Project/QQVoice/bin",
+    "settings.editor.selected.configurable": "terminal"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Admin\Desktop\Project\QQVoice\bin" />
       <recent name="C:\Users\Admin\Desktop\Project\QQVoice" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.main">
+  <component name="RunManager" selected="Python.voice_web">
     <configuration name="device" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="QQVoice" />
       <option name="ENV_FILES" value="" />
@@ -82,7 +72,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="voice_web" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="QQVoice" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -95,7 +85,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\Admin\Desktop\Project\QQVoice\voice_web.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -106,7 +96,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.main" />
+        <item itemvalue="Python.voice_web" />
         <item itemvalue="Python.device" />
       </list>
     </recent_temporary>
@@ -127,6 +117,73 @@
       <option name="presentableId" value="Default" />
       <updated>1706861875567</updated>
     </task>
+    <task id="LOCAL-00001" summary="[init]">
+      <option name="closed" value="true" />
+      <created>1707102069900</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1707102069900</updated>
+    </task>
+    <task id="LOCAL-00002" summary="[add] silk encoder">
+      <option name="closed" value="true" />
+      <created>1707102859024</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1707102859024</updated>
+    </task>
+    <task id="LOCAL-00003" summary="[add] slk encoder">
+      <option name="closed" value="true" />
+      <created>1707105352512</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1707105352512</updated>
+    </task>
+    <task id="LOCAL-00004" summary="[update] 补充">
+      <option name="closed" value="true" />
+      <created>1707114636559</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1707114636559</updated>
+    </task>
+    <task id="LOCAL-00005" summary="[update] log">
+      <option name="closed" value="true" />
+      <created>1707115482033</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1707115482033</updated>
+    </task>
+    <task id="LOCAL-00006" summary="[fix] slk后缀">
+      <option name="closed" value="true" />
+      <created>1707115868246</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1707115868246</updated>
+    </task>
+    <task id="LOCAL-00007" summary="[update] 文件名显示优化">
+      <option name="closed" value="true" />
+      <created>1707116528779</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1707116528779</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="[init]" />
+    <MESSAGE value="[add] silk encoder" />
+    <MESSAGE value="[add] slk encoder" />
+    <MESSAGE value="[update] 补充" />
+    <MESSAGE value="[update] log" />
+    <MESSAGE value="[fix] slk后缀" />
+    <MESSAGE value="[update] 文件名显示优化" />
+    <option name="LAST_COMMIT_MESSAGE" value="[update] 文件名显示优化" />
   </component>
 </project>
