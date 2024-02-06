@@ -105,7 +105,7 @@ def download_amr():
 model_names = get_model_names()
 tone_list = ["default"]
 
-with gr.Blocks(title="QQ语音替换") as demo:
+with gr.Blocks(title="语音替换") as demo:
     with gr.Group():
         gr.Markdown(value="模型选择")
         with gr.Row():

@@ -20,7 +20,7 @@ def get_amr_from_wav(wav_path: str) -> str:
     if Path(slk_path).exists():
         os.remove(slk_path)
 
-    command = "sh ./bin/wav2slk.sh {}".format(wav_path)
+    command = "sh ./bin/wav2silk.sh {}".format(wav_path)
     p = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
     stdout, stderr = p.communicate()
     errMsg = stderr.decode().strip()
